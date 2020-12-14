@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <style>
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    </style>
+    <script>
+
+function toCelsius(fahrenheit) {
+    return (5 / 9) * (fahrenheit - 32);
+}
+
+function toString() {
+
+}
+
+function runme()
+{
+    //document.getElementById("demo").innerHTML = toCelsius;
+
+    // var x = {};
+    // x.test1 = "Direct assignment";
+    // x["test2"] = "Assignment by key";
+    // x.toString = function(a, b) {
+    //     return x.test1 + " " + x.test2 + " a is " + a + " b is " + b;
+    // };
+
+    // var y = {
+    //     test1 : "there is",
+    //     test2 : "no spoon",
+    //     toString : function() {
+    //         /* Must use *this* to access local members in current definition scope */
+    //         return this.test1 + " " + this.test2;
+    //     } /* this must have no semicolons */
+    // };
+
+    // document.getElementById("demo").innerHTML =
+        // x.toString("o love", "of mine");
+        // y.toString("o love", "of mine");
+
+
+    //var x = new String(); // Declares x as a String object
+    //var y = new Number(); // Declares y as a Number object
+    //var z = new Boolean(); // Declares z as a Boolean object
+    //console.log(typeof x); // "object"
+    //console.log(typeof y); // "object"
+    //console.log(typeof z); // "object"
+    //console.log(typeof true); // "boolean"
+    //console.log(typeof false); // "boolean"
+
+    var x = "John Doe";
+    // var y = new String("John Doe"); // Slow! Not recommended!
+
+    // console.log(x == y); // true
+    // console.log(x === y); // false
+
+    // var x = new String("John Doe");
+    // var y = new String("John Doe");
+
+    // console.log(x == y); // false
+    // console.log(x === y); // false
+
+    //console.log(x.length);
+    console.log(x.indexOf("n D"));
+    console.log(x.lastIndexOf("o"));
+    console.log(x.search("o")); // Can do regex!
+    // x.slice(start, stop-exclusive) -- somewhat like python
+    // x.substring -- like slice, but cannot accept negative indices
+    // x.substr(start, length)
+
+
+    x = "Please visit Microsoft and Microsoft!";
+    var y = x.replace("Microsoft", "W3Schools"); // only replaces first occurrence
+    console.log(y);
+
+    y = x.replace("MICROSOFT", "W3Schools"); // case-sensitive by default
+    console.log(y);
+
+    y = x.replace(/MICROSOFT/i, "W3Schools"); // regex, i means insensitive
+    console.log(y);
+
+    y = x.replace(/Microsoft/g, "W3Schools"); // regex, g means global -- replaces all occurrences
+    console.log(y);
+
+    y = x.replace(/MICROSOFT/ig, "W3Schools"); // works
+    console.log(y);
+
+    y = x.replace(/MICROSOFT/gi, "W3Schools"); // works
+    console.log(y);
+
+}
+
+    </script>
+</head>
+
+<body>
+    <p><button onclick="runme()">Run Me!</button></p>
+    <hr/>
+    <div id="demo"></div>
+    <hr/>
+    <button onclick="this.innerHTML = Date()">The time is?</button> This example uses the <em>this</em> keyword to change the contents of the current element.
+</body>
+
+</html>
